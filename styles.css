@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+main {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #7f8c8d;
+}
+
+.directory {
+    margin-left: 20px;
+}
+
+.file, .folder {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.folder {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.file {
+    color: #27ae60;
+}
+
+.folder > .directory {
+    display: none;
+}
+
+.folder.open > .directory {
+    display: block;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.folder > .icon::before {
+    content: "📁";
+}
+
+.file > .icon::before {
+    content: "📄";
+}
+
+.folder.open > .icon::before {
+    content: "📂";
+}
